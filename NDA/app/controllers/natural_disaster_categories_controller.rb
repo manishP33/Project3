@@ -10,7 +10,14 @@ class NaturalDisasterCategoriesController < ApplicationController
   # GET /natural_disaster_categories/1
   # GET /natural_disaster_categories/1.json
   def show
+    @natural_disaster_categories = NaturalDisasterCategory.find(params[:id])
+    @disaster = Disaster.find(params[:id])
+
+      respond_to do |format|
+        format.html {render :show}
+        format.json {render json: @disaster}
   end
+end
 
   # GET /natural_disaster_categories/new
   def new
