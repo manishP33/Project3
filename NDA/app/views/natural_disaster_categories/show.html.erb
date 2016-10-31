@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @natural_disaster_category.title %>
+</p>
+
+<p>
+  <strong>Photo url:</strong>
+  <%= @natural_disaster_category.photo_url %>
+</p>
+
+<%= link_to 'Edit', edit_natural_disaster_category_path(@natural_disaster_category) %> |
+<%= link_to 'Back', natural_disaster_categories_path %>

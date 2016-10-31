@@ -1,0 +1,2 @@
+module NaturalDisasterCategoriesHelper
+end

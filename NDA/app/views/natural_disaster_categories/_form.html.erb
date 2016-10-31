@@ -1,0 +1,27 @@
+<%= form_for(natural_disaster_category) do |f| %>
+  <% if natural_disaster_category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(natural_disaster_category.errors.count, "error") %> prohibited this natural_disaster_category from being saved:</h2>
+
+      <ul>
+      <% natural_disaster_category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :photo_url %>
+    <%= f.text_field :photo_url %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,1 @@
+json.array! @natural_disaster_categories, partial: 'natural_disaster_categories/natural_disaster_category', as: :natural_disaster_category

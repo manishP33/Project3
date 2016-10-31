@@ -1,0 +1,2 @@
+class NaturalDisasterCategory < ApplicationRecord
+end

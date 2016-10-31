@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Natural Disaster Categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Photo url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @natural_disaster_categories.each do |natural_disaster_category| %>
+      <tr>
+        <td><%= natural_disaster_category.title %></td>
+        <td><img src="<%= natural_disaster_category.photo_url %>"></td>
+        <td><%= link_to 'Show', natural_disaster_category %></td>
+        <td><%= link_to 'Edit', edit_natural_disaster_category_path(natural_disaster_category) %></td>
+        <td><%= link_to 'Destroy', natural_disaster_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Natural Disaster Category', new_natural_disaster_category_path %>

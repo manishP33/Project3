@@ -1,0 +1,1 @@
+json.partial! "natural_disaster_categories/natural_disaster_category", natural_disaster_category: @natural_disaster_category
