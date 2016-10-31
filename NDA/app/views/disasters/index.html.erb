@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Disasters</h1>
+
+<table>
+  <thead>
+    <ul>
+      <li>Title</li>
+      <li>Photo url</li>
+      <li>Description</li>
+      <li>Preparation</li>
+      <!-- <li colspan="3"></li> -->
+    </ul>
+  </thead>
+
+  <tbody>
+    <% @disasters.each do |disaster| %>
+      <tr>
+
+        <td><%= disaster.title %></td>
+        <td><%= disaster.photo_url %></td>
+        <td><%= disaster.description %></td>
+        <td><%= disaster.preparation %></td>
+        <td><%= link_to 'Show', disaster %></td>
+        <td><%= link_to 'Edit', edit_disaster_path(disaster) %></td>
+        <td><%= link_to 'Destroy', disaster, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Disaster', new_disaster_path %>
